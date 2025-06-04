@@ -11,7 +11,7 @@ export default function Splitter() {
   const [parsedKeys, setParsedKeys] = useState<string[]>([]);
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
   const [originalObject, setOriginalObject] = useState<Record<string, any>>({});
-  const [fileName, setFileName] = useState("filtered");
+  const [fileName, setFileName] = useState("output");
 
   const handleCheckbox = (key: string) => {
     setSelectedKeys((prev) =>
