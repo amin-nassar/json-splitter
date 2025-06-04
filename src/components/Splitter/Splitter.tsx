@@ -6,6 +6,7 @@ import { Input } from "../ui/input";
 import { toast } from "sonner";
 import FileUploader from "../FileUpload";
 import { Label } from "../ui/label";
+import { trackEvent } from "../../analytics";
 
 export default function Splitter() {
   const [parsedKeys, setParsedKeys] = useState<string[]>([]);
@@ -28,12 +29,14 @@ export default function Splitter() {
   };
 
   const handleCopy = () => {
+    trackEvent("Clicked Copy", "Button", "Home Page");
     navigator.clipboard.writeText(JSON.stringify(getFilteredJSON(), null, 2));
 
     toast.success("Copied to clipboard!");
   };
 
   const handleDownload = () => {
+    trackEvent("Clicked Download", "Button", "Home Page");
     const stringJSON = JSON.stringify(getFilteredJSON(), null, 2);
     const blob = new Blob([stringJSON], { type: "application/json" });
 
