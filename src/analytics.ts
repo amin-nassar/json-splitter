@@ -9,10 +9,10 @@ export const initGA = () => {
   ReactGA.send("pageview");
 };
 
-export const trackEvent = (action, category = "General", label = "") => {
+export const trackEvent = (
+  action: string,
+  category = "General",
+  label = ""
+) => {
   ReactGA.event({ category, action, label });
-};
-
-export const trackPageView = (path) => {
-  ReactGA.send({ hitType: "pageview", page: path });
 };
