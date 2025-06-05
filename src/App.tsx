@@ -7,13 +7,12 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    console.log("Setup");
     initGA();
   }, []);
 
   return (
     <>
-      <main className=" h-screen max-h-screen bg-background text-foreground p-4">
+      <main className="h-[calc(100vh-45px)] bg-background text-foreground p-4 overflow-y-auto">
         <Splitter />
         <Toaster position="top-center" richColors theme="light" />
       </main>

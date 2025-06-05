@@ -69,15 +69,12 @@ export default function Splitter() {
   const parsedKeysCount = Object.keys(parsedKeys).length;
   return (
     <div className="h-full flex flex-col justify-center items-center">
-      <h1 className="text-6xl font-bold mb-10 max-sm:text-4xl">
-        JSON Splitter
-      </h1>
-      <Card className="w-[30%] max-[1048px]:w-[60%] max-md:w-[100%] mx-auto">
-        <CardContent className="flex flex-col gap-6 ">
+      <Card className="w-[50%] max-[1048px]:w-[60%] max-md:w-[100%] mx-auto max-h-full">
+        <CardContent className="flex flex-col gap-6 max-sm:gap-3 max-h-full">
           <FileUploader onUpload={handleUploadFile} />
           {parsedKeysCount > 0 && (
             <>
-              <div className="grid gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 columns-2 gap-y-2 gap-x-4 grow-1 overflow-auto">
                 {parsedKeys.map((key) => (
                   <label
                     key={key}
@@ -91,7 +88,7 @@ export default function Splitter() {
                   </label>
                 ))}
               </div>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 max-sm:gap-2">
                 <Button className="cursor-pointer" onClick={handleCopy}>
                   Copy Result
                 </Button>
@@ -100,7 +97,7 @@ export default function Splitter() {
                   <span className="px-4 text-sm text-muted-foreground">OR</span>
                   <div className="flex-grow border-t border-gray-300" />
                 </div>
-                <div className="flex items-end gap-3 max-sm:flex-col max-sm:items-stretch max-sm:gap-3">
+                <div className="flex items-end gap-3 max-sm:flex-col max-sm:items-stretch max-sm:gap-1">
                   <div className="grow flex flex-col gap-1">
                     <Label htmlFor="fileName">File Name</Label>
                     <Input
