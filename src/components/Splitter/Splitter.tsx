@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import FileUploader from "../FileUpload";
 import { Label } from "../ui/label";
 import { trackEvent } from "../../analytics";
+import { Download } from "lucide-react";
 
 export default function Splitter() {
   const [parsedKeys, setParsedKeys] = useState<string[]>([]);
@@ -67,9 +68,10 @@ export default function Splitter() {
   };
 
   const parsedKeysCount = Object.keys(parsedKeys).length;
+
   return (
     <div className="h-full flex flex-col justify-center items-center">
-      <Card className="w-[50%] max-[1048px]:w-[60%] max-md:w-[100%] mx-auto max-h-full">
+      <Card className="w-full md:w-[70%] xl:w-[50%] 2xl:w-[30%] mx-auto max-h-full">
         <CardContent className="flex flex-col gap-6 max-sm:gap-3 max-h-full">
           <FileUploader onUpload={handleUploadFile} />
           {parsedKeysCount > 0 && (
@@ -97,7 +99,7 @@ export default function Splitter() {
                   <span className="px-4 text-sm text-muted-foreground">OR</span>
                   <div className="flex-grow border-t border-gray-300" />
                 </div>
-                <div className="flex items-end gap-3 max-sm:flex-col max-sm:items-stretch max-sm:gap-1">
+                <div className="flex items-end gap-3">
                   <div className="grow flex flex-col gap-1">
                     <Label htmlFor="fileName">File Name</Label>
                     <Input
@@ -107,8 +109,8 @@ export default function Splitter() {
                       onChange={(e) => setFileName(e.target.value)}
                     />
                   </div>
-                  <Button className="cursor-pointer" onClick={handleDownload}>
-                    Download
+                  <Button onClick={handleDownload} className="cursor-pointer">
+                    <Download />
                   </Button>
                 </div>
               </div>
