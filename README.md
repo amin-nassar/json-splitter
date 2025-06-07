@@ -37,3 +37,12 @@ npm install
 # 3. Start the dev server
 npm run dev
 ```
+
+## 📬 Contact
+
+For any inquiries or collaborations, feel free to reach out:
+
+📧 **Email:** amin.nassar.ce@gmail.com  
+🔗 **LinkedIn:** [Amin Nassar](https://linkedin.com/in/amin-m-nassar)
+
+Enjoy exploring **Edita** and happy coding! ✨
