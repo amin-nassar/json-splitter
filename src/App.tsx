@@ -1,6 +1,6 @@
-import Splitter from "./components/Splitter";
-import { Toaster } from "./components/ui/sonner";
-import { initGA } from "./analytics";
+import Splitter from "@components/Splitter";
+import { Toaster } from "@/ui/sonner";
+import { initGA } from "@/analytics";
 
 import "./styles/globals.css";
 import { useEffect } from "react";

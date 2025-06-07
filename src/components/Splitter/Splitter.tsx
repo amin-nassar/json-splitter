@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Card, CardContent } from "../ui/card";
-import { Button } from "../ui/button";
-import { Checkbox } from "../ui/checkbox";
-import { Input } from "../ui/input";
+import { Card, CardContent } from "@/ui/card";
+import { Button } from "@/ui/button";
+import { Checkbox } from "@/ui/checkbox";
+import { Input } from "@/ui/input";
 import { toast } from "sonner";
-import FileUploader from "../FileUpload";
-import { Label } from "../ui/label";
-import { trackEvent } from "../../analytics";
+import FileUploader from "@components/FileUpload";
+import { Label } from "@/ui/label";
+import { trackEvent } from "@/analytics";
 import { Download } from "lucide-react";
 
 export default function Splitter() {
