@@ -1,54 +1,39 @@
-# React + TypeScript + Vite
+# 🧩 JSON Splitter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**JSON Splitter** is a tiny tool built to help **designers** work with large JSON files exported from Figma (typically design tokens or variable collections).
 
-Currently, two official plugins are available:
+Instead of editing raw JSON by hand or duplicating files for each theme, this app lets you:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🗂 **Upload** a JSON file (drag & drop or file picker)
+- ✅ **Select** the keys (collections) you want to keep
+- 📄 **Copy** or **Download** the filtered JSON
+- ✏️ **Rename** the downloaded file (optional)
 
-## Expanding the ESLint configuration
+It’s fast, minimal, and built with non-devs in mind.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Why?
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+During a **Design Systems & Tokens Bootcamp**, my fellow designers were struggling to manage JSON files generated from Figma plugins. Each file contained multiple theme collections, and they had to manually split/edit them — a fragile and frustrating process (especially for those who don't know about coding or JSON syntax).
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**JSON Splitter** was created to simplify that pain.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠 Tech Stack
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Lucide Icons](https://lucide.dev/)
+
+## ✅ How to Run Locally
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/your-username/json-splitter.git
+cd json-splitter
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the dev server
+npm run dev
 ```
